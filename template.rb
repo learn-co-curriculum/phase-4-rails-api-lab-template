@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-BASE_URI = "https://raw.githubusercontent.com/learn-co-curriculum/phase-4-rails-api-l
-ab-template/master"
+BASE_URI = path.gsub "/template.rb", ""
 
 ### Remove files
 
