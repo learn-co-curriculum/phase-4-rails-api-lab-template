@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+BASE_URI = "https://raw.githubusercontent.com/learn-co-curriculum/phase-4-rails-api-l
+ab-template/master"
+
 ### Remove files
 
 # Don't specify a Ruby version, so the lab will work for as many students as possible
@@ -41,26 +44,7 @@ run 'bundle install'
 inside 'config/initializers' do
   remove_file 'cors.rb'
 
-  file 'cors.rb' do
-    <<~RUBY
-      # Be sure to restart your server when you modify this file.
-
-      # Avoid CORS issues when API is called from the frontend app.
-      # Handle Cross-Origin Resource Sharing (CORS) in order to accept cross-origin AJAX requests.
-
-      # Read more: https://github.com/cyu/rack-cors
-
-      Rails.application.config.middleware.insert_before 0, Rack::Cors do
-        allow do
-          origins '*'
-
-          resource '*',
-                   headers: :any,
-                   methods: [:get, :post, :put, :patch, :delete, :options, :head]
-        end
-      end
-    RUBY
-  end
+  file 'cors.rb', URI.parse("#{BASE_URI}/files/cors.rb").open(&:read)
 end
 
 ### RSpec Setup
@@ -86,3 +70,11 @@ inside 'spec' do
   # Require json_expectations
   prepend_to_file 'spec_helper.rb', "require 'rspec/json_expectations'\n"
 end
+
+### Lab Files
+
+remove_file 'README.md'
+
+file 'README.md', URI.parse("#{BASE_URI}/files/README.md").open(&:read)
+file 'LICENSE.md', URI.parse("#{BASE_URI}/files/LICENSE.md").open(&:read)
+file 'CONTRIBUTING.md', URI.parse("#{BASE_URI}/files/CONTRIBUTING.md").open(&:read)
