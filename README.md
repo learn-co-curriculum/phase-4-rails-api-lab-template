@@ -6,7 +6,7 @@ updated dependencies.
 ## Usage
 
 ```sh
-rails new <lab-name> -BT --api --minimal -m=./rails-lab-template/template.rb
+rails new <lab-name> -BT --api --minimal -m=https://raw.githubusercontent.com/learn-co-curriculum/phase-4-rails-api-lab-template/master/template.rb
 ```
 
 - `-m` uses the custom Flatiron lab template to provide some additional setup.
