@@ -32,19 +32,8 @@ gem_group :test do
   gem 'shoulda-matchers', '~> 4.0'
 end
 
-# Uncomment rack-cors gem
-gsub_file 'Gemfile', /^#\s+gem\s+['"]rack-cors['"]$/, "gem 'rack-cors'"
-
 # bundle
 run 'bundle install'
-
-### CORS Configuration
-
-inside 'config/initializers' do
-  remove_file 'cors.rb'
-
-  file 'cors.rb', URI.parse("#{BASE_URI}/api-only/files/cors.rb").open(&:read)
-end
 
 ### RSpec Setup
 
@@ -71,9 +60,8 @@ inside 'spec' do
 end
 
 ### Lab Files
-
 remove_file 'README.md'
 
-file 'README.md', URI.parse("#{BASE_URI}/shared/README.md").open(&:read)
-file 'LICENSE.md', URI.parse("#{BASE_URI}/shared/LICENSE.md").open(&:read)
-file 'CONTRIBUTING.md', URI.parse("#{BASE_URI}/shared/CONTRIBUTING.md").open(&:read)
+get "#{BASE_URI}/shared/README.md", 'README.md'
+get "#{BASE_URI}/shared/LICENSE.md", 'LICENSE.md'
+get "#{BASE_URI}/shared/CONTRIBUTING.md", 'CONTRIBUTING.md'

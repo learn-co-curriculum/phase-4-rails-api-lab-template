@@ -1,13 +1,21 @@
-# Rails API Lab Template: API with React Frontend
+# Rails API Lab Templates
 
-A [Rails Application Template][] for generating new Rails API labs with
+Several [Rails Application Templates][] for generating new Rails API labs with
 updated dependencies.
 
-## Usage
+## Rails API Only
+
+```sh
+rails new <lab-name> -BT --api --minimal -m=https://raw.githubusercontent.com/learn-co-curriculum/phase-4-rails-api-lab-template/master/api-only/template.rb
+```
+
+## Rails API w/React
 
 ```sh
 rails new <lab-name> -BT --api --minimal -m=https://raw.githubusercontent.com/learn-co-curriculum/phase-4-rails-api-lab-template/master/api-react/template.rb
 ```
+
+## Notes
 
 - `-m` uses the custom Flatiron lab template to provide some additional setup.
 - `-B` skips bundle install, since we'll want to make some changes before bundling.
