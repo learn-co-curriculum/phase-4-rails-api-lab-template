@@ -1,7 +1,3 @@
 Rails.application.routes.draw do
-  get "/students", to: "students#index"
-  post "/students", to: "students#create"
-  get "/students/:id", to: "students#show"
-  delete "/students/:id", to: "students#destroy"
-  patch "/students/:id", to: "students#update"
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

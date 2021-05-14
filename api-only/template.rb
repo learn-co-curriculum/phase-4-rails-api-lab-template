@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-BASE_URI = path.gsub "/template.rb", ""
+BASE_URI = path.gsub "/api-only/template.rb", ""
 
 ### Remove files
 
@@ -43,7 +43,7 @@ run 'bundle install'
 inside 'config/initializers' do
   remove_file 'cors.rb'
 
-  file 'cors.rb', URI.parse("#{BASE_URI}/files/cors.rb").open(&:read)
+  file 'cors.rb', URI.parse("#{BASE_URI}/api-only/files/cors.rb").open(&:read)
 end
 
 ### RSpec Setup
@@ -74,6 +74,6 @@ end
 
 remove_file 'README.md'
 
-file 'README.md', URI.parse("#{BASE_URI}/files/README.md").open(&:read)
-file 'LICENSE.md', URI.parse("#{BASE_URI}/files/LICENSE.md").open(&:read)
-file 'CONTRIBUTING.md', URI.parse("#{BASE_URI}/files/CONTRIBUTING.md").open(&:read)
+file 'README.md', URI.parse("#{BASE_URI}/shared/README.md").open(&:read)
+file 'LICENSE.md', URI.parse("#{BASE_URI}/shared/LICENSE.md").open(&:read)
+file 'CONTRIBUTING.md', URI.parse("#{BASE_URI}/shared/CONTRIBUTING.md").open(&:read)
