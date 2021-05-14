@@ -3,7 +3,7 @@
 ## Usage
 
 ```sh
-rails new <lab-name> -BT --api --minimal -m=https://raw.githubusercontent.com/learn-co-curriculum/phase-4-rails-api-lab-template/master/template.rb
+rails new <lab-name> -BT --api --minimal -m=https://raw.githubusercontent.com/learn-co-curriculum/phase-4-rails-api-lab-template/main/template.rb
 ```
 
 ## Template Notes

@@ -6,13 +6,13 @@ updated dependencies.
 ## Rails API Only
 
 ```sh
-rails new <lab-name> -BT --api --minimal -m=https://raw.githubusercontent.com/learn-co-curriculum/phase-4-rails-api-lab-template/master/api-only/template.rb
+rails new <lab-name> -BT --api --minimal -m=https://raw.githubusercontent.com/learn-co-curriculum/phase-4-rails-api-lab-template/main/api-only/template.rb
 ```
 
 ## Rails API w/React
 
 ```sh
-rails new <lab-name> -BT --api --minimal -m=https://raw.githubusercontent.com/learn-co-curriculum/phase-4-rails-api-lab-template/master/api-react/template.rb
+rails new <lab-name> -BT --api --minimal -m=https://raw.githubusercontent.com/learn-co-curriculum/phase-4-rails-api-lab-template/main/api-react/template.rb
 ```
 
 ## Notes
