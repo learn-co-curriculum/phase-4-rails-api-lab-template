@@ -32,9 +32,15 @@ The [foreman gem](https://github.com/ddollar/foreman) lets us run multiple
 processes from a Procfile. This means we can create a `rails start` script
 to run Rails and React together.
 
-- Add `foreman` gem to development group
 - Add `Procfile.dev` with process runner instructions
 - Add `rake start` task
+
+Note: `foreman` shouldn't be included in the Gemfile. Instruct users to install
+`foreman` globally:
+
+```sh
+gem install foreman
+```
 
 ## Add Session/Cookie Middleware
 

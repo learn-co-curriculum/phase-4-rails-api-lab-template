@@ -20,12 +20,6 @@ remove_dir 'vendor'
 # possible
 gsub_file 'Gemfile', /^ruby\s+['"].*['"]$/, ''
 
-# Add foreman gem
-gem_group :development do
-  # run multiple servers (React and Rails)
-  gem "foreman", "~> 0.87.2"
-end
-
 # Add rspec-rails gem
 gem_group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
