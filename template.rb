@@ -11,8 +11,9 @@ if yes?("Include React?")
     insert_into_file 'package.json', after: '"private": true,' do
       "\n  \"proxy\": \"http://localhost:3000\","
     end
-    
-    gsub_file 'package.json', '"name": "client"', "\"name\": \"#{app_name}-client\""
+
+    name = app_name.gsub("_", "-")
+    gsub_file 'package.json', '"name": "client"', "\"name\": \"#{name}-client\""
     
     gsub_file 'package.json', 'react-scripts start', 'PORT=4000 react-scripts start'
   end
