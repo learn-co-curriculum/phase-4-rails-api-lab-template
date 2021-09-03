@@ -1,7 +1,7 @@
 # Rails API Lab Templates
 
-A [Rails Application Templates][] for generating new Rails API labs with updated
-dependencies.
+A [Rails Application Template][templating guide] for generating new Rails API labs 
+with updated dependencies.
 
 Usage:
 
@@ -100,7 +100,7 @@ gem install foreman
 
 ### Templating
 
-- [Rails Docs on Templating][rails application template]
+- [Rails Docs on Templating][templating guide]
 - [Rails Templating Blog](http://www.rutionrails.com/blog/2016/7/8/regarding-rails-templates-1)
 - [Thor Actions Wiki](https://github.com/erikhuda/thor/wiki/Actions) and [Docs](https://rdoc.info/github/erikhuda/thor/master/Thor/Actions)
 
@@ -111,4 +111,4 @@ gem install foreman
 - [let & let! explained](https://www.codewithjason.com/difference-let-let-instance-variables-rspec/)
 - [Upcase Testing Videos](https://thoughtbot.com/upcase/testing)
 
-[rails application template]: https://guides.rubyonrails.org/rails_application_templates.html
+[templating guide]: https://guides.rubyonrails.org/rails_application_templates.html
